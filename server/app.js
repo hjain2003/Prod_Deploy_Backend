@@ -22,7 +22,6 @@ app.get("/", (req, res) => {
     res.send("🖼️ Image Upload API is running!");
   });
 
-// Start Server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
