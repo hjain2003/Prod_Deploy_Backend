@@ -17,7 +17,7 @@
 3. Set "Block all public access" to off state.
 4. Enable ACL.
 5. Enable versioning.
-6. Set bucket policy:
+6. Set bucket policy :
     ```json
     {
         "Version": "2012-10-17",
