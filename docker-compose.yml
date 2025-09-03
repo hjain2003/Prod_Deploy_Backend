@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./Prod_Deploy_Backend/server
+    container_name: my-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./Prod_Deploy_Backend/server/.env   # AWS creds etc.
+
+  frontend:
+    build:
+      context: ./Prod_Deploy_Frontend/client
+      args:
+        - REACT_APP_API_URL=http://18.144.13.156:5000
+    container_name: my-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
