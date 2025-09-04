@@ -3,7 +3,7 @@ import { uploadImage, getAllImages } from "../controllers/imageController.js";
 
 const router = express.Router();
 
-router.post("/upload", uploadImage);
-router.get("/images", getAllImages);
+router.post("/api/upload", uploadImage);
+router.get("/api/images", getAllImages);
 
 export default router;
